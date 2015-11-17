@@ -1,3 +1,17 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#photo{
+    position: absolute;
+    top:150px;
+    left:250px;
+    border: 2px solid black;
+    width: 40%;
+    height:50%;
+    border-radius: 4px; padding: 8px;
+    resize:both;
+    overflow:auto;
+    opacity:0;
+    z-index:-1;
+    background-color:gray;
+  }
