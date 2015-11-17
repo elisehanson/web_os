@@ -8,7 +8,88 @@
 </head>
 <body>
 
-<%= yield %>
+  <header>  <h5><span id=day></span><br><span id=hour></span>  <span>:<span>  <span id=minute></span> <span>:</span><span id=second>  </span></h5></div>  
+</header>
+
+<div class="container">
+  <div class="frame">
+
+    <div class="col1">
+      <div class="bit-10">
+          <div class="box">1</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">2</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">3</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">4</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">5</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">6</div>
+      </div>
+  </div>
+
+  <div class="col2">
+      <div class="bit-10">
+          <div class="box">
+              <img src="http://www.clipartbest.com/cliparts/RcG/GLq/RcGGLqqGi.png">
+          </div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">7</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">8</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">9</div>
+      </div>
+
+      <div class="bit-10">
+          <div class="box">10</div>
+      </div>
+  </div>
+
+		  <div draggable="true" id="dragme">   
+      <%= yield(:setting) %> 
+      </div>
+
+      <div draggable="true" id="email">
+        <%= yield(:email)%>
+      </div>
+
+
+  </div> <!-- frame -->
+</div> <!-- container -->
+
+	<footer> 
+<div id="columns">
+    <div class="column" id="column1" draggable="true"><img src="http://icons.iconarchive.com/icons/hopstarter/puck-1/256/Microsoft-Office-Word-icon.png"></div>
+    <div class="column" id="column2" draggable="true"><img src="http://icons.iconarchive.com/icons/babasse/old-school/256/mail-icon.png"></div>
+    <div class="column" id="column3" draggable="true"><img src="http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/maps-icon.png"></div>
+    <div class="column" id="column4" draggable="true"><img src="http://icons.iconarchive.com/icons/artua/mac/512/Setting-icon.png"></div>
+    <div class="column" id="column5" draggable="true"><img src="http://icons.iconarchive.com/icons/reclusekc/yoyo/512/360-Chrome-icon.png"></div>
+    <div class="column" id="column6" draggable="true"><img src="http://icons.iconarchive.com/icons/uriy1966/steel-system/512/Games-icon.png"></div>
+    <div class="column" id="column6" draggable="true"><img src="http://icons.iconarchive.com/icons/robsonbillponte/happy-holidays/512/Pictures-icon.png"></div>    
+     <div class="column" id="column6" draggable="true"><img src="http://www.fsb-wv.com/Mobile/_images/calculator.png"></div>
+ <div class="column" id="column8" draggable="true"><img src="http://icons.iconarchive.com/icons/treetog/junior/256/trash-empty-icon.png"></div>
+   </div>
+
+	</footer>
 
 </body>
 </html>
