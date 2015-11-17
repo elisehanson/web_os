@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebOs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <div class="background blur">
+<header>
+  <div class="background blur">
+      <h5><span id="day"></span><br><span id="hour"></span>  <span>:<span>  <span id="minute"></span> <span>:</span><span id="second">  </span></h5>
+      <%= flash[:notice] if flash[:notice] %>
+      <%= flash[:alert] if flash[:alert] %>
+  
+</header>
+</div></div>
+
+
+  <%= yield %>
+
+<div class="background blur">
+
+<footer> 
+  <div id="columns">
+    <div class="column" id="column1">
+    	<img src="http://icons.iconarchive.com/icons/hopstarter/puck-1/256/Microsoft-Office-Word-icon.png"></div>
+    <div class="column" id="column2">
+    	<img src="http://icons.iconarchive.com/icons/babasse/old-school/256/mail-icon.png"></div>
+    <div class="column" id="column3">
+    	<img src="http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/maps-icon.png"></div>
+    <div class="column" id="column4">
+    	<img src="http://icons.iconarchive.com/icons/artua/mac/512/Setting-icon.png"></div>
+    <div class="column" id="column5">
+    	<img src="http://icons.iconarchive.com/icons/reclusekc/yoyo/512/360-Chrome-icon.png"></div>
+    <div class="column" id="column6">
+    	<img src="http://icons.iconarchive.com/icons/uriy1966/steel-system/512/Games-icon.png"></div>
+    <div class="column" id="column6">
+    	<img src="http://icons.iconarchive.com/icons/robsonbillponte/happy-holidays/512/Pictures-icon.png"></div>    
+     <div class="column" id="column6">
+     	<img src="http://www.fsb-wv.com/Mobile/_images/calculator.png"></div>
+    <div class="column" id="column8">
+    	<img src="http://icons.iconarchive.com/icons/treetog/junior/256/trash-empty-icon.png"></div>
+    </div>
+</footer>
+
+</div>
+
+</div>
+
+</body>
+</html>
