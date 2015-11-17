@@ -1,13 +1,20 @@
 <!-- This is a form for users to sign in
 the % symbol indicates that this is a ruby application
  -->
-<h1>Sign Up</h1>
-<%=form_for User.new do |f| %>
-<%=f.label :username %>
-<%=f.text_field :username %>
-<%=f.label :password %>
-<%=f.password_field :password %>
-<%=f.label :password_confirmation %>
-<%=f.password_field :password_confirmation %>
-<%=f.submit "Sign Up" %>
-<%end%>
+
+
+
+<div class="stage"> <!-- blur not working yet -->
+</div>
+
+<div class="sign">
+	<div class="sign-text">
+		 <h3>CREATE ACCOUNT</h3>
+			<%=form_for User.new do |f| %>
+			<%=f.text_field :username, :placeholder => "Username" %>
+			<%=f.password_field :password, :placeholder => "Password" %>
+			<%=f.password_field :password_confirmation, :placeholder => "Password Again" %>
+			<%=f.submit "Sign Up", :class => 'button' %>
+		<%end%>
+	</div>
+</div>
