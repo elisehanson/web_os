@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :emails
   resources :sessions
+  resources :words
 
   root 'sessions#new'
 
