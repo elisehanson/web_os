@@ -14,19 +14,26 @@
 
 
 <header>
+
+    <span class="right">
       <h5><span id="day"></span><br><span id="hour"></span>  <span>:<span>  <span id="minute"></span> <span>:</span><span id="second">  </span></h5>
+    </span>
+
+    <span class="left">
 
       <%= flash[:notice] if flash[:notice] %>
       <%= flash[:alert] if flash[:alert] %>
 
-  <% if current_user %>
-      
-  <p> hey <%= current_user.username %> ! </p>
 
-  <%= link_to "Log out", log_out_path, method: :delete %>
 
- <% end %> 
+      <% if current_user %>
+          
+       Welcome, <%= current_user.username %>! 
 
+      <%= link_to "Log out", log_out_path, method: :delete %>?
+
+     <% end %> 
+   </span>
 
   </div>
 </header>
@@ -86,49 +93,49 @@
   </div>
  
   <div draggable="true" id="word">
-    <h3 id="close_word">X</h3>
+    <h3 id="close_word" class="x">&#10799;</h3>
     <%= render "words/new" %>
     <%=  yield :word %>
    </div>
 
   <div draggable="true" id="email">
-    <h3 id="close_email">X</h3>
+    <h3 id="close_email" class="x">&#10799;</h3>
     <%= render "emails/new" %>
     <%= yield :email %>
   </div>
   
   <div draggable="true" id="map">
-    <h3 id="close_map">X</h3>
+    <h3 id="close_map" class="x">&#10799;</h3>
     <%= render "maps/show" %>
     <%= yield :map %>
   </div>
  
   <div draggable="true" id="dragme">  
-    <h3 id="close_setting">X</h3>
+    <h3 id="close_setting" class="x">&#10799;</h3>
     <%= render "settings/edit" %>
     <%= yield :setting %> 
   </div>
 
   <div draggable="true" id="browser">
-    <h3 id="close_browser">X</h3>
+    <h3 id="close_browser" class="x">&#10799;</h3>
     <%= render "browsers/show" %>
     <%= yield :browser %> 
   </div>
 
   <div draggable="true" id="game">
-    <h3 id="close_game">X</h3>
+    <h3 id="close_game" class="x">&#10799;</h3>
     <%= render "games/show" %>
     <%= yield :game %>
   </div>
 
   <div draggable="true" id="photo">
-    <h3 id="close_photo">X</h3>
+    <h3 id="close_photo" class="x">&#10799;</h3>
     <%= render "photos/new" %>
     <%= yield :photo %>
   </div>
 
   <div draggable="true" id="calculator">
-    <h3 id="close_calculator">X</h3>
+    <h3 id="close_calculator" class="x">&#10799;</h3>
     <%= render "calculators/show" %>
     <%= yield :calculator %>
   </div>
