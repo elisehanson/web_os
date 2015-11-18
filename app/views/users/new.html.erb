@@ -11,6 +11,9 @@ the % symbol indicates that this is a ruby application
 			<%=f.password_field :password, :placeholder => "Password" %>
 			<%=f.password_field :password_confirmation, :placeholder => "Password Again" %>
 			<%=f.submit "Sign Up", :class => 'button' %>
-		<%end%>
+			<%end%>
+		  <div class="tiny">
+      		<%= flash[:alert] if flash[:alert] %>
+         </div>
 	</div>
 </div>

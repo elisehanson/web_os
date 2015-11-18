@@ -25,6 +25,7 @@
 
   body {
     background-color:#fafafa;
+    font-family:  sans-serif;
   }
 
   header {
@@ -35,6 +36,19 @@
     height:30px;
     width:100%;
     background-color:lightgrey;
+  }
+
+  header .left{
+    display: block;
+    float:left;
+     width: 500px;
+     margin:5px;
+  }
+
+  header .right{
+    display: block;
+    float:right;
+     width: 100px;
   }
 
 
@@ -120,7 +134,7 @@ li a
       width:20%;
       padding:25px 0;
       text-align:center;
-      font-family: 'HeydingsCommonIconsRegular', Helvetida Neue, sans-serif;
+      font-family: sans-serif;
       font-weight:700;
       letter-spacing:1px;
       font-size:40px;
@@ -203,4 +217,19 @@ li a:hover  {
       width:60px;
     }
 
-  */
+
+ */
+/*
+=======
+ .x {
+    font-weight:100; 
+    font-size:40px; 
+    margin-top: -20px; 
+    margin-bottom:0px; 
+    width:40px;
+  }
+
+  .x:hover {
+    color:white;
+  }
+    */
