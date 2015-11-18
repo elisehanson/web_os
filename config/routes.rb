@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :emails
   resources :sessions
   resources :settings
+  resources :words
 
   root 'sessions#new'
 

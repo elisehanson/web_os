@@ -1,3 +1,23 @@
 <% content_for :word do %>
-  <h2> Word</h2>
+
+  <span class="tiny"> Word </span>
+
+<!--   takes a long time to load? 
+  also have to re-style all text field / input boxes for site -->
+
+	<%= form_for :word, :url => {:controller=> "words", :action => "create", :id => session[:user_id]} , :method => :post, :remote=> true do |f| %> 
+
+	  <div class="field">
+	    <%= f.label :title %><br>
+	    <%= f.text_field :title, style: "resize: none; height:50px; width:100%; background-color:white; " %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :content %><br>
+	    <%= f.text_area :content, style: "resize: none; height:100px; width:100%" %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit 'save', :class => 'b' %>
+	  </div>
+	<% end %>
+
 <% end %>
