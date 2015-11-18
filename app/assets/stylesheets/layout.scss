@@ -25,6 +25,21 @@
     }
   }
 
+  header .left{
+    display: block;
+    float:left;
+     width: 500px;
+     margin:5px;
+  }
+
+  header .right{
+    display: block;
+    float:right;
+     width: 100px;
+  }
+
+
+
 
   footer {
     height:50px;

@@ -5,7 +5,7 @@
 <!--   takes a long time to load? 
   also have to re-style all text field / input boxes for site -->
 
-	<%= form_for :word do |f| %> 
+	<%= form_for :word, :url => {:controller=> "words", :action => "create", :id => session[:user_id]} , :method => :post, :remote=> true do |f| %> 
 
 	  <div class="field">
 	    <%= f.label :title %><br>
