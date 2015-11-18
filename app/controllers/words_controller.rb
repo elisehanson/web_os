@@ -23,6 +23,7 @@ class WordsController < ApplicationController
     respond_to do |format|
       if @word.save
         format.html { redirect_to @word, notice: 'Post was successfully created.' }
+        format.js   { }
         format.json { render :show, status: :created, location: @word }
       else
         format.html { render :new }
@@ -31,6 +32,19 @@ class WordsController < ApplicationController
     end
   end
 
+  def update
+    @word = Word.find params[:id]
+    @word.user_id = current_user.id if current_user
+    respond_to do |format|
+      if @word.update(post_params)
+        format.html { redirect_to @word, notice: 'Post was successfully updated.' }
+        format.json { render :show, status: :ok, location: @word }
+      else
+        format.html { render :edit }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
