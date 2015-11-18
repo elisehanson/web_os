@@ -7,6 +7,17 @@
   <li><a href="#">?</a></li>
   <li class="color-bg"></li>
 </ul>
-
-
-<%end%>
+<%= form_for :settings, :url => {:controller=> "settings", :action => "update", :id => session[:user_id]} , :method => :put, :remote=> true  do |f| %>
+  <%= label_tag(:background_color, "Background color") %>
+  <%= text_field_tag(:background_color) %>
+  <%= submit_tag("confirm") %>
+<% end %>
+<h5> HIIIIIII </h5> 
+<script>
+  $(document).ready(function(){
+    $("h5").click(function(){
+      $("body").css("background-color", <%"white" %> )
+    });
+  });
+</script>
+<% end %>
