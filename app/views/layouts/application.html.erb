@@ -42,55 +42,11 @@
 <div class="container">
   <div class="frame">
 
-    <div class="col1">
-      <div class="bit-10">
-          <div class="box" draggable="true">1</div>
-      </div>
+    <%=yield %>
 
-      <div class="bit-10">
-          <div class="box" draggable="true">2</div>
-      </div>
+    <%= render 'words/index' %>
+    <%= yield :word %>
 
-      <div class="bit-10">
-          <div class="box" draggable="true">3</div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">4</div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">5</div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">6</div>
-      </div>
-  </div>
-
-  <div class="col2">
-      <div class="bit-10">
-          <div class="box" draggable="true">
-              <img src="http://www.clipartbest.com/cliparts/RcG/GLq/RcGGLqqGi.png">
-          </div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">7</div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">8</div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">9</div>
-      </div>
-
-      <div class="bit-10">
-          <div class="box" draggable="true">10</div>
-      </div>
-  </div>
  
   <div draggable="true" id="word">
     <h3 id="close_word" class="x">&#10799;</h3>
