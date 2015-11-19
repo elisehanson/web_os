@@ -3,8 +3,8 @@
 	<div class="sign-text">
 		<h3>LOG IN</h3>
       <%= form_tag log_in_path do %>
-        <%= text_field_tag :username, nil, placeholder: 'Username' %>
-        <%= password_field_tag :password, nil, placeholder: 'Password' %>
+        <%= text_field_tag :username, nil, placeholder: 'Username', :class => 'login' %>
+        <%= password_field_tag :password, nil, placeholder: 'Password', :class => 'login' %>
         <%= submit_tag "Log In", class: "button" %>
       <% end %>
 
