@@ -54,6 +54,13 @@
     <%=  yield :word %>
    </div>
 
+  <div draggable="true" id="word_show">
+    <h3 id="close_word_show" class="x">&#10799;</h3>
+    <%= render "words/show" %>
+    <%=  yield :word_show %>
+   </div>
+
+
   <div draggable="true" id="email">
     <h3 id="close_email" class="x">&#10799;</h3>
     <%= render "emails/new" %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
     get'/home'=> 'home#index'
+    get 'home/search' => 'home#search'
 
     get "/log-in" => "sessions#new"
     post "/log-in" => "sessions#create"
