@@ -1,0 +1,8 @@
+$(document).ready(function(){
+    $("#confirm_button").click(function(){
+      $("body").css("background-color","<%= current_user.setting.background_color %>" )
+      $(".icons").css({"height":"<%= icon_height %>","width":"<%= icon_width %>"})
+      $("#columns").css({"width":"<%= column_width %>","height":"<%= column_height %>","margin-left":"<%= margin_left %>","margin-top":"<%= margin_top %>"}) 
+    });
+});
+

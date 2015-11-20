@@ -42,7 +42,7 @@
 
 
   footer {
-    height:50px;
+    height:60px;
     width:100%;
     background-color:rgba(192,192,192,0);
     text-align: center;
@@ -195,17 +195,19 @@ li a:hover  {
     opacity:.6;
   }
   #columns{
-    width:60%;
-    height:100%;
-    margin-left:20%;
+    width:40%;
+    height:110%;
+    margin-left:30%;
     background-color:rgba(192,192,192,0.3);
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
-}
-   #columns img{
-      height:50px;
-      width:60px;
+    margin-top:0%;
+    
+    img{
+      height:30px;
+      width:40px;
     }
+  }
 
   .x {
     font-weight:100; 
