@@ -111,13 +111,15 @@ $(document).ready(function(){
   $(function() {
     $("#word").draggable();
     $("#word").resizable();
+    $("#word_show").draggable();
+    $("#word_show").resizable();
     $("#email").draggable();
     $("#email").resizable();
-    $("#dragme").draggable();   
+    $("#dragme").draggable();
     $("#dragme").resizable();
-    $("#map").draggable();    
+    $("#map").draggable();   
     $("#map").resizable();
-    $("#browser").draggable();    
+    $("#browser").draggable();
     $("#browser").resizable();
     $("#game").draggable();    
     $("#game").resizable();
@@ -172,7 +174,7 @@ $(document).ready(function(){
   $("#word_icon").click(function() {
     $("#word").css({"opacity":"1","z-index":"10"});
     $("#word").fadeIn();
-  }); 
+  });
 
   $("#close_setting").click(function() {
     $("#dragme").fadeOut();
@@ -181,7 +183,7 @@ $(document).ready(function(){
   $("#set_icon").click(function() {
     $("#dragme").css({"opacity":"1","z-index":"10"});
     $("#dragme").fadeIn();
-  });  
+  });
   
   $("#close_email").click(function() {
     $("#email").fadeOut();
@@ -190,7 +192,7 @@ $(document).ready(function(){
   $("#email_icon").click(function() {
     $("#email").css({"opacity":"1","z-index":"10"});
     $("#email").fadeIn();
-  }); 
+  });
   
   $("#close_map").click(function() {
     $("#map").fadeOut();
@@ -199,7 +201,7 @@ $(document).ready(function(){
   $("#map_icon").click(function() {
     $("#map").css({"opacity":"1","z-index":"10"});
     $("#map").fadeIn();
-  }); 
+  });
 
   $("#close_browser").click(function() {
     $("#browser").fadeOut();
@@ -208,7 +210,7 @@ $(document).ready(function(){
   $("#browser_icon").click(function() {
     $("#browser").css({"opacity":"1","z-index":"10"});
     $("#browser").fadeIn();
-  }); 
+  });
 
   $("#close_game").click(function() {
     $("#game").fadeOut();
@@ -217,7 +219,7 @@ $(document).ready(function(){
   $("#game_icon").click(function() {
     $("#game").css({"opacity":"1","z-index":"10"});
     $("#game").fadeIn();
-  }); 
+  });
 
   $("#close_photo").click(function() {
     $("#photo").fadeOut();
@@ -226,7 +228,7 @@ $(document).ready(function(){
   $("#photo_icon").click(function() {
     $("#photo").css({"opacity":"1","z-index":"10"});
     $("#photo").fadeIn();
-  }); 
+  });
 
   $("#close_calculator").click(function() {
     $("#calculator").fadeOut();
@@ -235,5 +237,20 @@ $(document).ready(function(){
   $("#calculator_icon").click(function() {
     $("#calculator").css({"opacity":"1","z-index":"10"});
     $("#calculator").fadeIn();
-  }); 
+  });
+
+
+$( ".click_show_box" ).each(function() {
+  $(this).on("click", function(){
+    $("#word_show").css({"opacity":"1","z-index":"10"});
+    $("#word_show").fadeIn();
+  });
 });
+
+  $("#close_word_show").click(function() {
+    $("#word_show").fadeOut();
+  });
+});
+
+
+
