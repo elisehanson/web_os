@@ -7,6 +7,8 @@ class WordsController < ApplicationController
   def show
     @user = User.find_by_username(params[:username])
     @word = Word.find(params[:id])
+    render "words/show", :layout => false
+
   end
 
   def new
@@ -45,6 +47,15 @@ class WordsController < ApplicationController
       end
     end
   end
+
+
+  def destroy
+    @word = Word.find(params[:id])
+    if @word.present?
+      @word.destroy
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
