@@ -252,5 +252,3 @@ $( ".click_show_box" ).each(function() {
   });
 });
 
-
-

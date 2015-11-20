@@ -14,7 +14,9 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			flash[:notice] = "Welcome to the site!"
-			redirect_to home_path
+			Setting.create(:user_id => @user.id)
+			redirect_to log_in_path
+			flash[:alert] = "Sign in again."
 		else
 			flash[:alert] = "There was a problem creating your account. Please try again."
 			redirect_to :back

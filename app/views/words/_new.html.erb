@@ -2,8 +2,6 @@
 
   <span class="tiny"> Word </span>
 
-<!--   takes a long time to load? 
-  also have to re-style all text field / input boxes for site -->
 
 	<%= form_for :word, :url => {:controller=> "words", :action => "create", :id => session[:user_id]} , :method => :post, :remote=> true do |f| %> 
 
@@ -19,6 +17,5 @@
 	  <span>  <%= f.submit 'save', :class => 'b' %> <span class="saved"> </span> </span>
 
 	<% end %>
-
 
 <% end %>
