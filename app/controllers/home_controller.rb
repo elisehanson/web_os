@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
 	def index
 		@words = Word.all
+		@setting = Setting.all
+		@users = User.all
 	end
 
 	def search

@@ -26,7 +26,7 @@ class WordsController < ApplicationController
       if @word.save
         format.html { redirect_to @word, notice: 'Post was successfully created.' }
         format.js   { }
-        format.json { render :show, status: :created, location: @word }
+        format.json { render json: @word, status: :created, location: @word }
       else
         format.html { render :new }
         format.json { render json: @word.errors, status: :unprocessable_entity }

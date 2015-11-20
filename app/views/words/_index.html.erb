@@ -1,19 +1,9 @@
 <div class="container">
   <div class="frame">
-
-    <% @words.each do |word| %>
-
-        <div class="col1">
-          <div class="bit-10">
-      	     <div class="box click_show_box" id="<%= word.id %>">
-                <div>
-      	        <%= word.title %>
-      	        <%= word.content %>
- 
-                  </div>
-          		</div>
-          	</div>
-          </div>
-    <% end %>
+    <div id ="posts">
+      <% @words.each do |word| %>
+        <%= render "words/wordicon", :word => word %>
+      <% end %>
+    </div>
 	</div>
 </div>
