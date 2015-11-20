@@ -48,12 +48,10 @@ body {
 }
 
 input {
-  display:block;
   box-sizing:border-box;
   background-color:transparent;
   border:none;
   color:black;
-  width:100%;
   font-size:.9rem;
   font-weight:200;
   margin-bottom:2rem;
@@ -62,6 +60,7 @@ input {
   border-bottom:0.1rem solid rgba(255,255,255,0.3);
   transition: all 0.2s ease-in-out;
 }
+
 input:hover {
   cursor:pointer;
 }
@@ -84,6 +83,11 @@ input:focus {
 }
 :-ms-input-placeholder {
    color: rgba(0,0,0,0.3);
+}
+
+.login {
+  display:block;
+  width:100%;
 }
 
 /* submit button */
