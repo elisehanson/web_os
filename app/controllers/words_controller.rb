@@ -36,7 +36,7 @@ class WordsController < ApplicationController
 
   def update
     @word = Word.find params[:id]
-    @word.user_id = current_user.id if current_user
+    # @word.user_id = current_user.id if current_user
     respond_to do |format|
       if @word.update(post_params)
         format.html { redirect_to @word, notice: 'Post was successfully updated.' }
