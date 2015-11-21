@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151120211401) do
     t.string   "password_salt"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "email"
   end
 
   create_table "words", force: :cascade do |t|

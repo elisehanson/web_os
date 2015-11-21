@@ -1,3 +1,12 @@
 <% content_for :email do %>
-this is email
+  <h3></h3>
+  <%= form_for :emails, :url=>{ :controller=>"emails", :action =>"create", :id=>session[:user_id]}, :method=>:post, :remote=>true  do |f| %>
+    <%= f.label :to %>
+    <%= f.text_field :email, :id=>"email_content"  %><br>
+    <%= f.label :subject %>
+    <%= f.text_field :subject, :id=>"subject_content" %><br>
+    <%= f.label :message %></br>
+    <%= f.text_area :body, size: "78x15", :id=>"body_content" %></br>
+    <%= f.submit "Send" %>
+  <% end %>
 <% end %>
