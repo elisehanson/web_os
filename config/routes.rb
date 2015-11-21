@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :settings
   resources :words
+  resources :photos
 
   root 'sessions#new'
 

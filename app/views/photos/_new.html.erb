@@ -1,3 +1,19 @@
 <% content_for :photo do %>
-  <h2> photo</h2>
+
+	<%= form_for :photo, :url => {:controller=> "photos", :action => "create", :id => session[:user_id]} , :method => :post, :html => { :multipart => true }, :remote=> true do |f| %> 
+
+ <div class="field">
+  <%= f.label :picture %>  
+<%= f.file_field :picture %> 
+ </div>
+
+  <div class="actions">
+    <%= f.submit "submit", :class => "button" %>
+  </div>
+
+<% end %>
+
+        <%= render "photos/index" %>
+    		<%= yield :photo %>
+
 <% end %>
