@@ -115,8 +115,8 @@ $(document).ready(function(){
     $("#word_show").resizable();
     $("#email").draggable();
     $("#email").resizable();
-    $("#dragme").draggable();
-    $("#dragme").resizable();
+    $("#setting").draggable();
+    $("#setting").resizable();
     $("#map").draggable();   
     $("#map").resizable();
     $("#browser").draggable();
@@ -125,8 +125,8 @@ $(document).ready(function(){
     $("#game").resizable();
     $("#photo").draggable();    
     $("#photo").resizable();
-    $("#calulator").draggable();    
-    $("#calulator").resizable();
+    $("#calculator").draggable();    
+    $("#calculator").resizable();
   });
     
 
@@ -177,17 +177,26 @@ $(document).ready(function(){
   });
 
   $("#close_setting").click(function() {
-    $("#dragme").fadeOut();
+    $("#setting").fadeOut();
   });
 
   $("#set_icon").click(function() {
-    $("#dragme").css({"opacity":"1","z-index":"10"});
-    $("#dragme").fadeIn();
+    $("#setting").css({"opacity":"1","z-index":"10"});
+    $("#setting").fadeIn();
   });
   
   $("#close_email").click(function() {
     $("#email").fadeOut();
   });
+  
+
+   $("#close_email").click(function Clear(){    
+        document.getElementById("email_content").value= "";    
+document.getElementById("subject_content").value= "";  
+document.getElementById("body_content").value= "";  
+  });
+
+
 
   $("#email_icon").click(function() {
     $("#email").css({"opacity":"1","z-index":"10"});

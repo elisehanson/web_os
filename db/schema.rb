@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119204551) do
+ActiveRecord::Schema.define(version: 20151121080514) do
 
   create_table "settings", force: :cascade do |t|
     t.string   "background_color", default: "#e9ddcd"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151119204551) do
     t.string   "password_salt"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "email"
   end
 
   create_table "words", force: :cascade do |t|
