@@ -1,3 +1,21 @@
 <% content_for :game do %>
-  <h2> games</h2>
+  <h2>Tic-Tac-Toe</h2>
+      
+  <select id="mySelect">
+    <option value="o">O</option>
+    <option value="x">X</option>
+  </select>
+
+  <button id= "game_reset" type="button">Reset</button>
+  <!--  <button type="button" onclick="myFunction()">confrim</button>-->
+  <%  @box=["one","two","three","four","five","six","seven","eight","nine"] %>
+  
+  <div id="wrapper">
+    <% @box.each do |box| %>
+      <div  class="box1" id=<%= box %>>
+        <img class= "pic_o" id= "pic_o_<%= box %>" src=<%= asset_path "o.png"%>>
+        <span><img class= "pic_x" id= "pic_x_<%= box %>" src=<%= asset_path "x.png"%>></span>
+      </div>
+    <% end  %>
+  </div>
 <% end %>

@@ -223,11 +223,14 @@ document.getElementById("body_content").value= "";
 
   $("#close_game").click(function() {
     $("#game").fadeOut();
+    $(".pic_o").css("opacity","0");
+    $(".pic_x").css("opacity","0");
   });
 
   $("#game_icon").click(function() {
     $("#game").css({"opacity":"1","z-index":"10"});
     $("#game").fadeIn();
+
   });
 
   $("#close_photo").click(function() {
@@ -259,5 +262,42 @@ $( ".click_show_box" ).each(function() {
   $("#close_word_show").click(function() {
     $("#word_show").fadeOut();
   });
+
+
+
+// tic tac toe game
+  var box=["#one","#two"]
+  var h1="x"
+  var h2="o"
+  
+  function myFunction(){
+    var turn= document.getElementById("mySelect").value;
+    return turn;
+  }
+
+  $(".box1").click(function (){
+    var xId= "#pic_x_"+this.id
+    var oId= "#pic_o_"+this.id
+    //var xElement = document.getElementById(pic_x_one)
+    //var yElement = document.getElementById(this.id)
+   // var xStyle = window.getComputedStyle(xElement)
+   // var yStyle = window.getComputedStyle(yElement)
+  //  var xOpacity = xStyle.getPropertyValue("opacity")
+   // var yOpacity = xStyle.getPtopertyValue("opacity")
+    //var xOpacity=document.getElementById("pic_x_one").opacity
+    if (myFunction()==="x"){
+      $(xId).css("opacity","1");
+    }else{
+      $(oId).css("opacity","1");
+    }
+  });
+  
+  $("#game_reset").click(function (){
+    $(".pic_o").css("opacity","0");
+    $(".pic_x").css("opacity","0");
+  });
+
+
+
 });
 
