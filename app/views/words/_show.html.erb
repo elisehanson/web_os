@@ -1,26 +1,15 @@
 <% content_for :word_show do %>
 
-
-<!-- 	render :update do |page|
-    page.replace_html 'my_div_' + params[:post_id].to_s, :partial => 'my_comments_section_partial_path'
-end -->
-
 	<div id="showthis" style="width:100%; height:100%;"></div>
 
 	<script> 
-
-	// alert($('selector').attr('id'));
       
 	$( ".click_show_box" ).each(function() {
 	  $(this).on("click", function(){
-	  	//alert($(this).attr('id'));
 	  	var id= $(this).attr('id');
         $('#showthis').load('/words/'+id); 
 	  });
 	});
-
-
-	//$('#showthis').load('/words/'+id); 
 
 	</script>
 

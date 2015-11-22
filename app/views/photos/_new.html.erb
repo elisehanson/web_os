@@ -1,19 +1,21 @@
 <% content_for :photo do %>
 
-	<%= form_for :photo, :url => {:controller=> "photos", :action => "create", :id => session[:user_id]} , :method => :post, :html => { :multipart => true }, :remote=> true do |f| %> 
+	<%= form_for :photo, :remote => true, :url => {:controller=> "photos", :action => "create", :id => session[:user_id]} , :method => :post, :html => { :multipart => true, :target => 'upload_frame' } do |f| %> 
 
  <div class="field">
   <%= f.label :picture %>  
-<%= f.file_field :picture %> 
+<%= f.file_field :picture %>  
  </div>
 
   <div class="actions">
-    <%= f.submit "submit", :class => "button" %>
+    <%= f.submit "submit", :class => "button", :remote => true %>
   </div>
 
 <% end %>
 
+	<!-- target to the iframe because of AJAX/file upload problem -->
+	
+<iframe id='upload_frame' name="upload_frame" style="width:1px;height:1px;border:0px" src="about:blank"></iframe>
         <%= render "photos/index" %>
-    		<%= yield :photo %>
 
 <% end %>
