@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   
+  get 'news/index'
+
   resources :users
   resources :emails
   resources :sessions
   resources :settings
   resources :words
   resources :photos
+  resources :news
 
   root 'sessions#new'
 
