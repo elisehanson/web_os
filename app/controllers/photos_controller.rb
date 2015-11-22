@@ -2,6 +2,7 @@ class PhotosController < ApplicationController
 
 	def index
     @photos = Photo.all
+    render "photos/index", :layout => false
 	end
 
   def show
@@ -25,16 +26,8 @@ class PhotosController < ApplicationController
   # POST /posts.json
   def create
     @photo = Photo.create(post_params)
+    
     # @photo.user_id = current_user.id if current_user
-    respond_to do |format|
-      if @photo.save
-        format.html { redirect_to @photo, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @photo }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
     
@@ -44,20 +37,12 @@ class PhotosController < ApplicationController
   def update
     @photo = Photo.find params[:id]
     # @post.user_id = current_user.id if current_user
-    respond_to do |format|
-      if @photo.update()
-        format.html { redirect_to @photo, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @photo }
-      else
-        format.html { render :edit }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
-      end
-    end
+
   end
 
 
   def destroy
-    @photo = Post.find(params[:id])
+    @photo = Photo.find(params[:id])
     if @photo.present?
       @photo.destroy
     end

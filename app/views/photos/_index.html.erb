@@ -1,6 +1,8 @@
-
-<% @photos.each do |photo| %>
-
-  <%= render 'photos/show' %>
-
-<% end %>
+   <% @photos.each do |photo| %>
+    <div class="grid-item" style="float:left">
+      <tr>
+        <td><%= image_tag photo.picture(:large) if photo.picture.present? %></td>
+        <td></td><br><div class="index">
+        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></td> </div>
+      </tr></div>
+    <% end %>
