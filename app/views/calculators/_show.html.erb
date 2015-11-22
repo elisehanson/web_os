@@ -1,3 +1,29 @@
 <% content_for :calculator do %>
-  <h2> calculator</h2>
+  <% cal=["1","2","3","+","4","5","6","-","7","8","9","*","/","0"]%>
+  <div id="cal">
+
+    <form name="calculator" >
+      <div id="display"> <input class"cal_button"type="textfield" name="ans" value=""></div>
+      <input class="cal_button" type="button" value="1"<% %> onClick="document.calculator.ans.value+='1'">
+      <input class="cal_button" type="button" value="2" onClick="document.calculator.ans.value+='2'">
+      <input class="cal_button" type="button" value="3" onClick="document.calculator.ans.value+='3'">
+      <input class="cal_button" type="button" value="+" onClick="document.calculator.ans.value+='+'">
+       
+      <input class="cal_button" type="button" value="4" onClick="document.calculator.ans.value+='4'">
+      <input class="cal_button" type="button" value="5" onClick="document.calculator.ans.value+='5'">
+      <input class="cal_button" type="button" value="6" onClick="document.calculator.ans.value+='6'">
+      <input class="cal_button" type="button" value="-" onClick="document.calculator.ans.value+='-'">
+       
+      <input class="cal_button" type="button" value="7" onClick="document.calculator.ans.value+='7'">
+      <input class="cal_button" type="button" value="8" onClick="document.calculator.ans.value+='8'">
+      <input class="cal_button" type="button" value="9" onClick="document.calculator.ans.value+='9'">
+      <input class="cal_button" type="button" value="*" onClick="document.calculator.ans.value+='*'">
+      <input class="cal_button" type="button" value="/" onClick="document.calculator.ans.value+='/'">
+       
+      <input class="cal_button" type="button" value="0" onClick="document.calculator.ans.value+='0'">
+      <input class="cal_button" type="reset" value="Reset">
+      <input class="cal_button" type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"><br>
+    </form>
+
+  </div>
 <% end %>
