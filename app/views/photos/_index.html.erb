@@ -1,8 +1,43 @@
+   
+<style>
+
+	.photogrid {
+		background-color:white;
+		margin:10px;
+		width:30%;
+		height:200px;
+		float:left;
+	}
+
+	.photogrid img {
+		max-width: 100%;
+		max-height:90%;
+	}
+
+	.delete {
+		position: relative;
+		top: 0; 
+		right: 0; 
+		margin:10px;" >   
+	}
+
+	</style>
+
+
+
+
    <% @photos.each do |photo| %>
-    <div class="grid-item" style="float:left">
-      <tr>
-        <td><%= image_tag photo.picture(:large) if photo.picture.present? %></td>
-        <td></td><br><div class="index">
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></td> </div>
-      </tr></div>
+
+
+    <div class="grid-item photogrid">
+<span style="float:right; margin:5px;"><%= link_to 'x', photo, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></span><br>
+    <%= image_tag photo.picture(:large) if photo.picture.present? %>
+     <br>
+
+
+     <!-- <div class="index">
+      </div> -->
+     </div>
     <% end %>
+
+
