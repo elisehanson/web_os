@@ -7,7 +7,7 @@
     left:250px;
 /*    border: 2px solid black;*/
     width: 30%;
-    height:60%;
+    height:62%;
     border-radius: 4px; padding: 8px;
     resize:both;
     overflow:auto;
@@ -26,11 +26,19 @@
     width:24%;
     height:24%;
    display:inline-block;
+   margin-bottom:2rem; 
+   margin-top:.5rem;
   }
 #display{
     width:100%;
     height:20%;
     border-bottom:2px black solid;
+  }
+
+  #display input {
+    width:100%;
+    height:20%;
+    margin:10px;
   }
 
 #cal input {
@@ -40,7 +48,6 @@
   color:black;
   font-size:.9rem;
   font-weight:200;
-  margin-bottom:2rem;
   outline:none;
   padding:0.6rem 0;
   border-bottom:0.1rem solid rgba(255,255,255,0.3);
