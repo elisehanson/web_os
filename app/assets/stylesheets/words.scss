@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #word{
     position: absolute;
-    top:150px;
+    top:100px;
     left:250px;
 /*    border: 2px solid black;*/
-    width: 40%;
-    height:50%;
+    width: 50%;
+    height:60%;
     border-radius: 4px; padding: 8px;
     resize:both;
     overflow:auto;
@@ -19,22 +19,20 @@
 
 
 .b {
-    background-color:white; width:100px;
+    background:rgba(255,255,255,0.75);
+    border:1px solid black;
+    font-family: arial;
+    font-size:10px;
+    height:28px;
+    width:100%;
+    cursor: pointer;
 }
 
-input {
-  box-sizing:border-box;
-  background-color:transparent;
-  border:none;
-  color:black;
-  font-size:.9rem;
-  font-weight:200;
-  margin-bottom:2rem;
-  outline:none;
-  padding:0.6rem 0;
-  border-bottom:0.1rem solid rgba(255,255,255,0.3);
-  transition: all 0.2s ease-in-out;
+.b:hover {
+    background-color: white;
 }
+
+
 
 #word_show {
       position: absolute;

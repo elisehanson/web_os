@@ -47,7 +47,7 @@ body {
 
 }
 
-input {
+.sign-text input {
   box-sizing:border-box;
   background-color:transparent;
   border:none;
@@ -61,10 +61,10 @@ input {
   transition: all 0.2s ease-in-out;
 }
 
-input:hover {
+.sign-text input:hover {
   cursor:pointer;
 }
-input:focus {
+.sign-text input:focus {
   border-bottom-color:black;
   cursor:text;
 }
@@ -91,7 +91,7 @@ input:focus {
 }
 
 /* submit button */
-button {
+.sign-text button {
   display:inline-block;
   margin-top:1.25rem;
   border:none;
@@ -105,13 +105,13 @@ button {
   cursor:pointer;
   transition: all 0.25s ease-in-out;
 }
-button:hover,
-button:focus {
+.sign-text button:hover, 
+.sign-text button:focus {
   border:0.1rem solid #000;
   margin-left:0.35rem;
   outline:none;
 }
-button::-moz-focus-inner {
+.sign-text button::-moz-focus-inner {
   border:none;
 }
 
