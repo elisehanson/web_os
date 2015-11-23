@@ -170,6 +170,11 @@ $(document).ready(function(){
   $("#close_word").click(function() {
     $("#word").fadeOut();
   });
+  
+  $("#close_word").click(function Clear(){    
+    document.getElementById("word_title").value= "";    
+    document.getElementById("word_content").value= "";  
+  });
 
   $("#word_icon").click(function() {
     $("#word").css({"opacity":"1","z-index":"10"});
@@ -190,10 +195,10 @@ $(document).ready(function(){
   });
   
 
-   $("#close_email").click(function Clear(){    
-        document.getElementById("email_content").value= "";    
-document.getElementById("subject_content").value= "";  
-document.getElementById("body_content").value= "";  
+  $("#close_email").click(function Clear(){    
+    document.getElementById("email_content").value= "";    
+    document.getElementById("subject_content").value= "";  
+    document.getElementById("body_content").value= "";  
   });
 
 

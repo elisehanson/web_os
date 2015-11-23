@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 
 	def show 
 		@user = User.find_by_username(params[:username])
-    	@word = Word.find(params[:id])
-    	@photo = Photo.find(params[:id])
+    @word = Word.find(params[:id])
+    @photo = Photo.find(params[:id])
 	end
 end

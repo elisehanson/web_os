@@ -15,16 +15,24 @@
     z-index:-1;
     background-color:lightgrey;
     box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
+}
 .news_feed{
   width:80%;
   margin:0 auto;;
  
   .news_title{
     padding-top:1%;
+    padding-bottom:1%;
   }
   .new_content{
-    line-height:110%; 
+    line-height:110%;
+    border-bottom:1px gray solid;
   }
-
+  a{
+    text-decoration: none;
+    color:black; 
+  }
+  a:hover {
+          color:white;
+        }
 }

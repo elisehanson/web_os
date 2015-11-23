@@ -2,39 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #game{
-    position: absolute;
-    top:35px;
-    left:250px;
-    width: 46%;
-    height:84%;
-    border-radius: 4px; padding: 8px;
-    resize:both;
-    overflow:auto;
-    opacity:0;
-    z-index:-1;
-    background-color:lightgray;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
+  position: absolute;
+  top:35px;
+  left:250px;
+  width: 46%;
+  height:84%;
+  border-radius: 4px; padding: 8px;
+  resize:both;
+  overflow:auto;
+  opacity:0;
+  z-index:-1;
+  background-color:lightgray;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
-  h2{
-      text-align:center;
-        font-family:Comic Sans MS;
-      }
+h2{
+  text-align:center;
+  font-family:Comic Sans MS;
+}
 
-  #game_reset{
-    height:3%;
-    width:9%;
-    font-size:10px;
-    font-color:black;
-    padding:0;
+#game_reset{
+  height:3%;
+  width:9%;
+  font-size:10px;
+  font-color:black;
+  padding:0;
+}
 
-
-  }
 #wrapper{
 width:601px;
 height:530px;
 margin:0 auto;
-/* background-color:black;*/
 }
 
 #one{
@@ -42,9 +40,7 @@ width:187px;
 height: 160px;
 border-bottom:20px solid black;
 border-right:20px solid black;
-/*  display:inline-block;*/
 margin:0px;
-/*  background-color:orange;*/
 float:left;
 }
 #two{
@@ -52,7 +48,6 @@ width:187px;
 height: 160px;
 border-bottom:20px solid black;
 border-right:20px solid black;
-/*  display:inline-block;*/
 margin:0px;
 float:left;
 }

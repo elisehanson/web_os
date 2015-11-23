@@ -4,14 +4,14 @@
   <% @colors = [["pink","#e6c6bb"],["bisque","#e9ddcd"],["tan","#a29189"],["sandybrown","#f4a460"],["maroon","#80000"],["darkolivegreen","#556b2f" ],["brown","#6a584a"],["dark brown","#3f372a"]]%>
   <% @docks = [["smallest","smallest"],["small","small"],["default","default"],["large","large"]] %>
 
-  <%= form_for :settings, :url => {:controller=> "settings", :action => "update", :id => session[:user_id]} , :method => :put, :remote=> true  do |f| %>
-    <%= label_tag(:background_color, "Background color") %>
+  <%= form_for :settings, :url =>{:controller=> "settings", :action=> "update", :id => session[:user_id]}, :method => :put, :remote=> true  do |f| %>
+    <%= label_tag(:background_color, "Background color", :class=> "setting_label") %>
     <%= select_tag(:background_color, options_for_select(@colors)) %><br> 
 
-    <%= label_tag(:dock_size, "dock size") %>
+    <%= label_tag(:dock_size, "dock size", :class=> "setting_label") %>
     <%= select_tag(:dock_size, options_for_select(@docks)) %><br>
 
-    <%= submit_tag "confirm", id: "confirm_button" %>
+    <%= submit_tag "confirm", :id=> "confirm_button" %>
   <% end %>
 
 <% end %>
