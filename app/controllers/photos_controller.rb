@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
     render "photos/index", :layout => false
       respond_to do |format|
         format.html
-        format.js
+        format.js  
       end
 	end
 

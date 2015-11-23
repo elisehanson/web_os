@@ -2,5 +2,7 @@
   <p><%= @word.content %></p>
 
 	<div style="position: absolute; bottom: 0; left: 0; margin:10px;" >   
-	 <%= link_to 'Destroy', @word, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %> 
+	 <%= link_to 'Destroy', @word, method: :delete, :remote => true %> 
 	</div>
+
+<!-- 	 data: { confirm: 'Are you sure?' } -->

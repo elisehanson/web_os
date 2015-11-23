@@ -1,4 +1,6 @@
+
 <% content_for :email do %>
+<div id="emailform">
   <%= form_for :emails, :url=>{ :controller=>"emails", :action =>"create", :id=>session[:user_id]}, :method=>:post, :remote=>true  do |f| %>
     <%= f.label "To:", :class=> "email_label" %>
     <%= f.text_field :email, :class=> "email_field", :id=> "email_content"  %><br>
@@ -7,4 +9,8 @@
     <%= f.text_area :body, :id=>"body_content" %></br>
     <%= f.submit "Send", :id=>"email_button"  %>
   <% end %>
+  </div>
+
+<center><div class="sent" style="margin-top:125px;"> </div></center>
 <% end %>
+
