@@ -1,7 +1,7 @@
 <div id="photo_<%= photo.id %>">
 	<div class="grid-item photogrid">
 		<span style="float:right; margin:5px;">
-			<%= link_to 'x', photo, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true, :class=> "delete_photo" %>
+			<%= link_to 'x', photo, method: :delete, :remote=> true, :class=> "delete_photo" %>
 		</span><br>
 		<%= image_tag photo.picture(:large) if photo.picture.present? %>
 	<br>
