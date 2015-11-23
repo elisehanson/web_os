@@ -4,101 +4,235 @@
 #game{
   position: absolute;
   top:35px;
-  left:250px;
-  width: 46%;
+  left:100px;
+  width: 85%;
   height:84%;
   border-radius: 4px; padding: 8px;
   resize:both;
   overflow:auto;
   opacity:0;
   z-index:-1;
-  background-color:lightgray;
+  background-color:#82d2e5;
   box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-h2{
+// h2{
+//   text-align:center;
+//   font-family:Comic Sans MS;
+// }
+
+// #game_reset{
+//   height:3%;
+//   width:9%;
+//   font-size:10px;
+//   font-color:black;
+//   padding:0;
+// }
+
+// #wrapper{
+// width:601px;
+// height:530px;
+// margin:0 auto;
+// }
+
+// #one{
+// width:187px;
+// height: 160px;
+// border-bottom:20px solid black;
+// border-right:20px solid black;
+// margin:0px;
+// float:left;
+// }
+// #two{
+// width:187px;
+// height: 160px;
+// border-bottom:20px solid black;
+// border-right:20px solid black;
+// margin:0px;
+// float:left;
+// }
+// #three{
+// width:187px;
+// height: 160px;
+// border-bottom:20px solid black;
+// float:left;
+// }
+// #four{
+// width:187px;
+// height: 160px;
+// border-bottom:20px solid black;
+// border-right:20px solid black;
+// float:left;
+// }
+// #five{
+// width:187px;
+// height: 160px;
+// border-bottom:20px solid black;
+// border-right:20px solid black;
+// float:left;
+// }
+// #six{
+// width:187px;
+// height: 160px;
+// border-bottom:20px solid black;
+// float:left;
+// }
+// #seven{
+// width:187px;
+// height: 160px;
+// border-right:20px solid black;
+// float:left;
+// }
+// #eight{
+// width:187px;
+// height: 160px;
+// border-right:20px solid black;
+// float:left;
+// }
+// #nine{
+// width:187px;
+// height: 160px;
+//   float:left;
+// }
+//  .pic_o{
+//     position:absolute;
+//     opacity:0;
+//   }
+//   .pic_x{
+//     position:absolute;
+//     opacity:0;
+//   }
+
+// Taja' Hangman 
+
+/* Variabes */  
+$orange: #ffa600;
+$green: #82d2e5;
+$grey: #545A69;
+$white: #fff;
+$base-color:$green ;
+
+/* Mixin's */ 
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin clear {
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+ @mixin box-size {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ @mixin transition {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin fade {
+  -moz-transition: all 1s ease-in;
+  -moz-transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
+}
+
+@mixin opacity {
+  opacity:0.4;
+  filter:alpha(opacity=40); 
+  @include fade;
+}
+
+@mixin corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; 
+  -khtml-border-radius: $radius; 
+}
+
+.gamebody {
+  background:$base-color;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color:$white;
+  height:100%;
   text-align:center;
-  font-family:Comic Sans MS;
+  font-size:18px;
 }
 
-#game_reset{
-  height:3%;
-  width:9%;
-  font-size:10px;
-  font-color:black;
+.wrappper{
+  @include clear;
+  width:100%;
+  margin:0 auto;
+}
+
+
+.wrapper canvas{
+  color:$white;
+  border: $white dashed 2px;
+  padding:15px;
+}
+
+.wrapper h1, .wrapper  h2, .wrapper  h3 {
+  font-family: sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+   margin:5px 0;
+}
+
+.wrapper  h1 {
+  font-size: 2.3em;
+}
+
+.wrapper h2 {
+  font-size: 1.2em;
+}
+
+.wrapper p{
+  font-size: 1.2em;
+}
+
+#alphabet {
+  @include clear;
+  margin:15px auto;
   padding:0;
+  max-width:900px;
 }
 
-#wrapper{
-width:601px;
-height:530px;
-margin:0 auto;
+#my-word ul{
+  list-style: none;
+    li{
+      float: left;
+      padding: 10px;
+      margin: 0 20px;
+    }
 }
 
-#one{
-width:187px;
-height: 160px;
-border-bottom:20px solid black;
-border-right:20px solid black;
-margin:0px;
-float:left;
-}
-#two{
-width:187px;
-height: 160px;
-border-bottom:20px solid black;
-border-right:20px solid black;
-margin:0px;
-float:left;
-}
-#three{
-width:187px;
-height: 160px;
-border-bottom:20px solid black;
-float:left;
-}
-#four{
-width:187px;
-height: 160px;
-border-bottom:20px solid black;
-border-right:20px solid black;
-float:left;
-}
-#five{
-width:187px;
-height: 160px;
-border-bottom:20px solid black;
-border-right:20px solid black;
-float:left;
-}
-#six{
-width:187px;
-height: 160px;
-border-bottom:20px solid black;
-float:left;
-}
-#seven{
-width:187px;
-height: 160px;
-border-right:20px solid black;
-float:left;
-}
-#eight{
-width:187px;
-height: 160px;
-border-right:20px solid black;
-float:left;
-}
-#nine{
-width:187px;
-height: 160px;
+
+#alphabet li {
   float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding-top:10px;
+  background:$white;
+  color:$base-color;
+  cursor:pointer;
+  @include corners(5px);
+  border: solid 1px $grey;
+    
+    &:hover{
+      background:$base-color;
+      border: solid 1px $white;
+      color:$grey;
+    }
 }
- .pic_o{
-    position:absolute;
-    opacity:0;
-  }
-  .pic_x{
-    position:absolute;
-    opacity:0;
-  }
