@@ -13,6 +13,10 @@ class WordsController < ApplicationController
 
   def new
     @word = Word.new
+      respond_to do |format|
+    format.html
+    format.js
+    end
   end
 
   def edit
@@ -24,8 +28,8 @@ class WordsController < ApplicationController
     @word.user_id = current_user.id if current_user
     respond_to do |format|
       if @word.save
+        format.js   { render action: "create" }
         format.html { redirect_to @word, notice: 'Post was successfully created.' }
-        format.js   { }
         format.json { render json: @word, status: :created, location: @word }
       else
         format.html { render :new }

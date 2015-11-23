@@ -1,7 +1,7 @@
 
 <% @photos.each do |photo| %>
 
-	<div class="grid-item photogrid">
+	<div class="grid-item photogrid" id="<%= photo.id %>">
 		<span style="float:right; margin:5px;">
 			<%= link_to 'x', photo, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %>
 		</span><br>

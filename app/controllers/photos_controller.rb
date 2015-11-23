@@ -3,6 +3,10 @@ class PhotosController < ApplicationController
 	def index
     @photos = Photo.all
     render "photos/index", :layout => false
+      respond_to do |format|
+        format.html
+        format.js
+      end
 	end
 
   def show
@@ -15,6 +19,11 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
     @photos = Photo.all
+
+      respond_to do |format|
+        format.html
+        format.js
+      end
   end
 
   # GET /posts/1/edit
@@ -45,6 +54,11 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
     if @photo.present?
       @photo.destroy
+
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 
@@ -61,9 +75,6 @@ class PhotosController < ApplicationController
       params.require(:photo).permit(:picture)
       # .merge(user_id: current_user)      
     end
-
-
-
 
 end
 
