@@ -3,14 +3,16 @@
   <div class="tiny" style="margin:-23px 0 10px 30px;">Word </div> 
 		<hr><br>
 
+<div id="wordform">
 
 	<%= form_for :word, :url => {:controller=> "words", :action => "create", :id => session[:user_id]} , :method => :post, :remote=> true do |f| %> 
 
-	    <%= f.text_field :title, style: "resize: none; height:50px; width:100%; background-color:white; padding:10px; margin:10px 0;", placeholder:"Title" %>
+	    <%= f.text_field :title, style: "resize: none; height:50px; width:100%; background-color:white; padding:10px; margin:10px 0;", placeholder: "Title" %>
 
-	    <%= f.text_area :content, style: "resize: none;  height:200px; width:100%; padding:10px;", placeholder:"Content" %>
+	    <%= f.text_area :content, style: "resize: none;  height:200px; width:100%; padding:10px;", placeholder: "Content" %>
 
-	  <span>  <%= f.submit 'save', :class => 'b' %> <span class="saved"> </span> </span>
+	    <%= f.submit 'save', :class => 'b' %><br> </div>
+	  	<center><div class="saved" style="margin-top:125px;"> </div>  </center>
 
 	<% end %>
 
