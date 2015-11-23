@@ -1,7 +1,5 @@
 <% content_for :game do %>
-  <h3> game </h3> 
-<!--  
-  <h2>Tic-Tac-Toe</h2>
+   <!-- <h2>Tic-Tac-Toe</h2>
       
   <select id="mySelect">
     <option value="o">O</option>
@@ -16,6 +14,27 @@
         <img class= "pic_o" id= "pic_o_  box %>" src= asset_path "o.png"%>>
         <span><img class= "pic_x" id= "pic_x_  box %>" src=  asset_path "x.png"%>></span>
       </div>
-     end  %>
-  </div>
+     </end  %>
+  </div> -->
+
+  <div class="gamebody">
+    <div class="wrapper">
+     <h1>Hangman</h1>
+      <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+    </div>
+    <div class="wrapper">
+      <div id="buttons">
+      </div>  
+      <p id="catagoryName"></p>
+      <div id="hold">
+      </div>
+      <p id="mylives"></p>
+      <p id="clue">Clue -</p>  
+       <canvas id="stickman">Browser does NOT support HTML5 Canvas tag</canvas>
+      <div class="container">
+        <button id="hint">Hint</button>
+        <button id="reset">Play again</button>
+      </div>
+    </div>
+</div>
 <% end %>
