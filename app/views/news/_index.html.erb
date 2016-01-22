@@ -1,0 +1,25 @@
+<% @results = Google::Search::News.new(query: "news") %> 
+
+
+<% content_for :news do %>
+
+
+  <div class="tiny" style="margin:-23px 0 10px 30px; position:fixed;">News </div> 
+    <hr><br>
+
+      <div class="news_feed">
+
+      <% @results.each do |result| %>
+        <div>
+          <div class="news_title">
+            <h4><%= link_to result.title, result.uri, target:"blank" %></h4>
+          </div>
+          <div class ="new_content">
+            <p><%= simple_format result.content %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+<% end %>

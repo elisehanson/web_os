@@ -115,8 +115,8 @@ $(document).ready(function(){
     $("#word_show").resizable();
     $("#email").draggable();
     $("#email").resizable();
-    $("#dragme").draggable();
-    $("#dragme").resizable();
+    $("#setting").draggable();
+    $("#setting").resizable();
     $("#map").draggable();   
     $("#map").resizable();
     $("#browser").draggable();
@@ -125,8 +125,8 @@ $(document).ready(function(){
     $("#game").resizable();
     $("#photo").draggable();    
     $("#photo").resizable();
-    $("#calulator").draggable();    
-    $("#calulator").resizable();
+    $("#calculator").draggable();    
+    $("#calculator").resizable();
   });
     
 
@@ -170,6 +170,11 @@ $(document).ready(function(){
   $("#close_word").click(function() {
     $("#word").fadeOut();
   });
+  
+  $("#close_word").click(function Clear(){    
+    document.getElementById("word_title").value= "";    
+    document.getElementById("word_content").value= "";  
+  });
 
   $("#word_icon").click(function() {
     $("#word").css({"opacity":"1","z-index":"10"});
@@ -177,17 +182,26 @@ $(document).ready(function(){
   });
 
   $("#close_setting").click(function() {
-    $("#dragme").fadeOut();
+    $("#setting").fadeOut();
   });
 
   $("#set_icon").click(function() {
-    $("#dragme").css({"opacity":"1","z-index":"10"});
-    $("#dragme").fadeIn();
+    $("#setting").css({"opacity":"1","z-index":"10"});
+    $("#setting").fadeIn();
   });
   
   $("#close_email").click(function() {
     $("#email").fadeOut();
   });
+  
+
+  $("#close_email").click(function Clear(){    
+    document.getElementById("email_content").value= "";    
+    document.getElementById("subject_content").value= "";  
+    document.getElementById("body_content").value= "";  
+  });
+
+
 
   $("#email_icon").click(function() {
     $("#email").css({"opacity":"1","z-index":"10"});
@@ -214,11 +228,14 @@ $(document).ready(function(){
 
   $("#close_game").click(function() {
     $("#game").fadeOut();
+    $(".pic_o").css("opacity","0");
+    $(".pic_x").css("opacity","0");
   });
 
   $("#game_icon").click(function() {
     $("#game").css({"opacity":"1","z-index":"10"});
     $("#game").fadeIn();
+
   });
 
   $("#close_photo").click(function() {
@@ -250,7 +267,78 @@ $( ".click_show_box" ).each(function() {
   $("#close_word_show").click(function() {
     $("#word_show").fadeOut();
   });
+
+
+
+// tic tac toe game
+  var box=["#one","#two"]
+  var h1="x"
+  var h2="o"
+  
+  function myFunction(){
+    var turn= document.getElementById("mySelect").value;
+    return turn;
+  }
+
+  $(".box1").click(function (){
+    var xId= "#pic_x_"+this.id
+    var oId= "#pic_o_"+this.id
+    var xElement = document.getElementById(pic_x_one)
+    var yElement = document.getElementById(this.id)
+   var xStyle = window.getComputedStyle(xElement)
+   var yStyle = window.getComputedStyle(yElement)
+   var xOpacity = xStyle.getPropertyValue("opacity")
+   var yOpacity = xStyle.getPtopertyValue("opacity")
+    var xOpacity=document.getElementById("pic_x_one").opacity
+    if (myFunction()==="x"){
+      $(xId).css("opacity","1");
+    }else{
+      $(oId).css("opacity","1");
+    }
+  });
+  
+  $("#game_reset").click(function (){
+    $(".pic_o").css("opacity","0");
+    $(".pic_x").css("opacity","0");
+  });
+
+
+var lineWeight = 10;
+function setup() {
+  var drawing = createCanvas(windowWidth, windowHeight);
+  drawing.parent('wrapper');
+  background(255);
+  strokeWeight(lineWeight);
+}
+
+function draw() {
+  stroke(0);
+  strokeWeight(lineWeight);
+  strokeCap(ROUND);
+  if (mouseIsPressed) {
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+$('#ten-px').click(function(){
+  lineWeight = 10;
+  $(this).addClass('active');
+  $('#two-px').removeClass('active');
 });
+
+$('#two-px').click(function(){
+  lineWeight = 2;
+  $(this).addClass('active');
+  $('#ten-px').removeClass('active');
+});
+
+
+});
+
 
 
 

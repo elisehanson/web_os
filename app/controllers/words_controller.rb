@@ -13,6 +13,10 @@ class WordsController < ApplicationController
 
   def new
     @word = Word.new
+      respond_to do |format|
+    format.html
+    format.js
+    end
   end
 
   def edit
@@ -24,9 +28,9 @@ class WordsController < ApplicationController
     @word.user_id = current_user.id if current_user
     respond_to do |format|
       if @word.save
+        format.js   { render action: "create" }
         format.html { redirect_to @word, notice: 'Post was successfully created.' }
-        format.js   { }
-        format.json { render :show, status: :created, location: @word }
+        format.json { render json: @word, status: :created, location: @word }
       else
         format.html { render :new }
         format.json { render json: @word.errors, status: :unprocessable_entity }
@@ -36,7 +40,7 @@ class WordsController < ApplicationController
 
   def update
     @word = Word.find params[:id]
-    @word.user_id = current_user.id if current_user
+    # @word.user_id = current_user.id if current_user
     respond_to do |format|
       if @word.update(post_params)
         format.html { redirect_to @word, notice: 'Post was successfully updated.' }

@@ -2,17 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #game{
-    position: absolute;
-    top:150px;
-    left:250px;
-/*    border: 2px solid black;*/
-    width: 40%;
-    height:50%;
-    border-radius: 4px; padding: 8px;
-    resize:both;
-    overflow:auto;
-    opacity:0;
-    z-index:-1;
-    background-color:lightgray;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
+  position: absolute;
+  top:35px;
+  left:200px;
+  width: 60%;
+  height:80%;
+  border-radius: 4px; padding: 8px;
+  resize:both;
+  overflow:auto;
+  opacity:0;
+  z-index:-1;
+  background-color:lightgrey;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+
+
+
+
+section {
+  /* display: flex; */
+  position: fixed;
+  width: 90%;
+  height: 90%;
+}
+section canvas {
+  position: absolute;
+  top: 50;
+  right: 50;
+  height: 90%;
+  outline: none;
+  cursor: crosshair;
+  background-color: white;
+}
+
+.drawing-button {
+  position: absolute;
+  left: 50;
+  top: 50;
+  width: 60px;
+  padding: 10px;
+  text-align: center;
+}
+.drawing-button.active {
+  background: lightblue;
+  border: none;
+  color: #fff;
+}
+
+#ten-px {
+  left: 60px;
+  top: 60px;
+}
+
+#two-px {
+  left: 60px;
+  top: 60px;
+}
+

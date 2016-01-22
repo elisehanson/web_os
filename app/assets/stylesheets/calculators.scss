@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #calculator{
     position: absolute;
-    top:150px;
+    top:100px;
     left:250px;
 /*    border: 2px solid black;*/
-    width: 40%;
-    height:50%;
+    width: 30%;
+    height:64%;
     border-radius: 4px; padding: 8px;
     resize:both;
     overflow:auto;
@@ -16,3 +16,54 @@
     background-color:lightgray;
     box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
+#cal{
+  width:100%;
+  height:90%;
+  border:2px black solid;
+
+}
+ .cal_button{
+    width:24%;
+    height:24%;
+   display:inline-block;
+   margin-bottom:2rem; 
+   margin-top:.5rem;
+   font-family: 'Karla';
+  }
+
+
+  .cal_button:hover{
+
+  }
+
+
+#display{
+    width:100%;
+    height:20%;
+    border-bottom:2px black solid;
+
+  }
+
+  #display input {
+    width:100%;
+    height:20%;
+    margin:10px;
+  }
+
+#cal input {
+  box-sizing:border-box;
+  background-color:transparent;
+  border:none;
+  color:black;
+  font-size:1.3rem;
+  font-weight:200;
+  outline:none;
+  padding:0.6rem 0;
+  border-bottom:0.1rem solid rgba(255,255,255,0.3);
+  transition: all 0.2s ease-in-out;
+        font-family: 'Karla';
+}
+#cal input:hover {
+  background-color:rgba(255,255,255,0.3);
+
+}

@@ -1,1 +1,9 @@
-$(".saved").html("Saved!").fadeIn().delay(3000).fadeOut();
+$("#wordform").fadeOut().delay(2000);
+
+$(".saved").html(" &#10003; <p> Saved!").fadeIn().delay(2000).fadeOut();
+
+$("#wordform").fadeIn();
+
+$('.frame').append('<%= j render("wordicon", :word => @word) %>');
+
+
