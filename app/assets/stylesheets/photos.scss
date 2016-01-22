@@ -53,6 +53,10 @@ input.upload {
     float:left;
 }
 
+.photogrid:hover {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
 .photogrid img {
     max-width: 100%;
     max-height:90%;

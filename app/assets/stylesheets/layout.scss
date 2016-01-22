@@ -1,5 +1,8 @@
 /*     application layout    */
 
+
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +11,12 @@
 
 body {
   background-color:#fafafa;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: sans-serif;
+  font-weight: 200;
+/*  Arial, 'Helvetica Neue', Helvetica,*/
+/*  font-family: 'Roboto', sans-serif;*/
   /*#fafafa;*/
+  letter-spacing: .3px;
 }
 
 header {  
@@ -19,6 +26,8 @@ header {
   height:30px;
   width:100%;
   background-color:lightgrey;
+  opacity: .9;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
   h5{
     text-align:right;
@@ -38,6 +47,7 @@ header .right{
   display: block;
   float:right;
    width: 100px;
+   margin:0 5px 0 0;
 }
 
 
@@ -52,7 +62,7 @@ footer {
 }
 
 .container {
-  height:600px;
+  height:800px;
   background: none;
 /*      overflow: hidden;*/
 }
@@ -86,6 +96,7 @@ footer {
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 /*  font-family: "Futura", sans-serif;*/
+font-weight: 400;
   font-size: 12px;
   text-align: center;
   padding: 20px 0; }
@@ -145,4 +156,14 @@ a  {
     }
 a:hover {
   text-decoration:underline;
+}
+
+
+h5 {
+  font-family:sans-serif;
+  font-weight: 400;
+}
+
+.checkmark {
+  font-size: 40px;
 }

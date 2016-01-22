@@ -1,17 +1,30 @@
+<style>
 
+.setting_dropdown { 
+	width:100%;
+	background-color:white;
+	border:none;
+	 }
+
+
+</style>
 
 <% content_for :setting do %>
-  <% @colors = [["pink","#e6c6bb"],["bisque","#e9ddcd"],["tan","#a29189"],["sandybrown","#f4a460"],["maroon","#80000"],["darkolivegreen","#556b2f" ],["brown","#6a584a"],["dark brown","#3f372a"]]%>
+
+  <div class="tiny" style="margin:-23px 0 10px 30px;">Settings </div> 
+		<hr><br>
+
+  <% @colors = [["pink","#ffa69e"],["light red","#ff7e6b"],["tan","#a29189"],["brown","#8c5e58"],["mint","#a9f0d1"],["darkolivegreen","#556b2f" ],["brown","#6a584a"],["white","#fafafa"]]%>
   <% @docks = [["smallest","smallest"],["small","small"],["default","default"],["large","large"]] %>
 
   <%= form_for :settings, :url =>{:controller=> "settings", :action=> "update", :id => session[:user_id]}, :method => :put, :remote=> true  do |f| %>
-    <%= label_tag(:background_color, "Background color", :class=> "setting_label") %>
-    <%= select_tag(:background_color, options_for_select(@colors)) %><br> 
+    <%= label_tag(:background_color, "Background Color", :class=> "setting_label") %>
+    <%= select_tag(:background_color, options_for_select(@colors), :class=> "setting_dropdown") %><br> 
 
-    <%= label_tag(:dock_size, "dock size", :class=> "setting_label") %>
-    <%= select_tag(:dock_size, options_for_select(@docks)) %><br>
+    <%= label_tag(:dock_size, "Dock Size", :class=> "setting_label") %>
+    <%= select_tag(:dock_size, options_for_select(@docks), :class=> "setting_dropdown") %><br>
 
-    <%= submit_tag "confirm", :id=> "confirm_button" %>
+    <%= submit_tag "confirm", :id=> "confirm_button", :class => 'b' %>
   <% end %>
 
 <% end %>

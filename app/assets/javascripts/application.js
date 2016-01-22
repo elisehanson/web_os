@@ -271,270 +271,74 @@ $( ".click_show_box" ).each(function() {
 
 
 // tic tac toe game
-  // var box=["#one","#two"]
-  // var h1="x"
-  // var h2="o"
+  var box=["#one","#two"]
+  var h1="x"
+  var h2="o"
   
-  // function myFunction(){
-  //   var turn= document.getElementById("mySelect").value;
-  //   return turn;
-  // }
-
-  // $(".box1").click(function (){
-  //   var xId= "#pic_x_"+this.id
-  //   var oId= "#pic_o_"+this.id
-    //var xElement = document.getElementById(pic_x_one)
-    //var yElement = document.getElementById(this.id)
-   // var xStyle = window.getComputedStyle(xElement)
-   // var yStyle = window.getComputedStyle(yElement)
-  //  var xOpacity = xStyle.getPropertyValue("opacity")
-   // var yOpacity = xStyle.getPtopertyValue("opacity")
-    //var xOpacity=document.getElementById("pic_x_one").opacity
-  //   if (myFunction()==="x"){
-  //     $(xId).css("opacity","1");
-  //   }else{
-  //     $(oId).css("opacity","1");
-  //   }
-  // });
-  
-  // $("#game_reset").click(function (){
-  //   $(".pic_o").css("opacity","0");
-  //   $(".pic_x").css("opacity","0");
-  // });
-
-// hangman game
-
-window.onload = function () {
-
-  var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-        't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  
-  var categories;         // Array of topics
-  var chosenCategory;     // Selected catagory
-  var getHint ;          // Word getHint
-  var word ;              // Selected word
-  var guess ;             // Geuss
-  var geusses = [ ];      // Stored geusses
-  var lives ;             // Lives
-  var counter ;           // Count correct geusses
-  var space;              // Number of spaces in word '-'
-
-  // Get elements
-  var showLives = document.getElementById("mylives");
-  var showCategory = document.getElementById("scatagory");
-  var getHint = document.getElementById("hint");
-  var showClue = document.getElementById("clue");
-
-
-
-  // create alphabet ul
-  var buttons = function () {
-    myButtons = document.getElementById('buttons');
-    letters = document.createElement('ul');
-
-    for (var i = 0; i < alphabet.length; i++) {
-      letters.id = 'alphabet';
-      list = document.createElement('li');
-      list.id = 'letter';
-      list.innerHTML = alphabet[i];
-      check();
-      myButtons.appendChild(letters);
-      letters.appendChild(list);
-    }
-  }
-    
-  
-  // Select Catagory
-  var selectCat = function () {
-    if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML = "Category: 90's Cartoons";
-    } else if (chosenCategory === categories[1]) {
-      catagoryName.innerHTML = "Category: Basketball Teams";
-    } else if (chosenCategory === categories[2]) {
-      catagoryName.innerHTML = "Category: Foods";
-    }
-  };
-
-  // Create geusses ul
-   result = function () {
-    wordHolder = document.getElementById('hold');
-    correct = document.createElement('ul');
-
-    for (var i = 0; i < word.length; i++) {
-      correct.setAttribute('id', 'my-word');
-      guess = document.createElement('li');
-      guess.setAttribute('class', 'guess');
-      if (word[i] === "-") {
-        guess.innerHTML = "-";
-        space = 1;
-      } else {
-        guess.innerHTML = "_";
-      }
-
-      geusses.push(guess);
-      wordHolder.appendChild(correct);
-      correct.appendChild(guess);
-    }
-  }
-  
-  // Show lives
-   comments = function () {
-    showLives.innerHTML = "You have " + lives + " lives";
-    if (lives < 1) {
-      showLives.innerHTML = "Game Over";
-    }
-    for (var i = 0; i < geusses.length; i++) {
-      if (counter + space === geusses.length) {
-        showLives.innerHTML = "You Win!";
-      }
-    }
+  function myFunction(){
+    var turn= document.getElementById("mySelect").value;
+    return turn;
   }
 
-      // Animate man
-  var animate = function () {
-    var drawMe = lives ;
-    drawArray[drawMe]();
-  }
-
-  canvas =  function(){
-
-    myStickman = document.getElementById("stickman");
-    context = myStickman.getContext('2d');
-    context.beginPath();
-    context.strokeStyle = "#fff";
-    context.lineWidth = 2;
-  };
-  
-    head = function(){
-      myStickman = document.getElementById("stickman");
-      context = myStickman.getContext('2d');
-      context.beginPath();
-      context.arc(60, 25, 10, 0, Math.PI*2, true);
-      context.stroke();
+  $(".box1").click(function (){
+    var xId= "#pic_x_"+this.id
+    var oId= "#pic_o_"+this.id
+    var xElement = document.getElementById(pic_x_one)
+    var yElement = document.getElementById(this.id)
+   var xStyle = window.getComputedStyle(xElement)
+   var yStyle = window.getComputedStyle(yElement)
+   var xOpacity = xStyle.getPropertyValue("opacity")
+   var yOpacity = xStyle.getPtopertyValue("opacity")
+    var xOpacity=document.getElementById("pic_x_one").opacity
+    if (myFunction()==="x"){
+      $(xId).css("opacity","1");
+    }else{
+      $(oId).css("opacity","1");
     }
-    
-  draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
-    
-    context.moveTo($pathFromx, $pathFromy);
-    context.lineTo($pathTox, $pathToy);
-    context.stroke(); 
+  });
+  
+  $("#game_reset").click(function (){
+    $(".pic_o").css("opacity","0");
+    $(".pic_x").css("opacity","0");
+  });
+
+
+var lineWeight = 10;
+function setup() {
+  var drawing = createCanvas(windowWidth, windowHeight);
+  drawing.parent('wrapper');
+  background(255);
+  strokeWeight(lineWeight);
 }
 
-   frame1 = function() {
-     draw (0, 150, 150, 150);
-   };
-   
-   frame2 = function() {
-     draw (10, 0, 10, 600);
-   };
-  
-   frame3 = function() {
-     draw (0, 5, 70, 5);
-   };
-  
-   frame4 = function() {
-     draw (60, 5, 60, 15);
-   };
-  
-   torso = function() {
-     draw (60, 36, 60, 70);
-   };
-  
-   rightArm = function() {
-     draw (60, 46, 100, 50);
-   };
-  
-   leftArm = function() {
-     draw (60, 46, 20, 50);
-   };
-  
-   rightLeg = function() {
-     draw (60, 70, 100, 100);
-   };
-  
-   leftLeg = function() {
-     draw (60, 70, 20, 100);
-   };
-  
-  drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1]; 
-
-
-  // OnClick Function
-   check = function () {
-    list.onclick = function () {
-      var geuss = (this.innerHTML);
-      this.setAttribute("class", "active");
-      this.onclick = null;
-      for (var i = 0; i < word.length; i++) {
-        if (word[i] === geuss) {
-          geusses[i].innerHTML = geuss;
-          counter += 1;
-        } 
-      }
-      var j = (word.indexOf(geuss));
-      if (j === -1) {
-        lives -= 1;
-        comments();
-        animate();
-      } else {
-        comments();
-      }
-    }
+function draw() {
+  stroke(0);
+  strokeWeight(lineWeight);
+  strokeCap(ROUND);
+  if (mouseIsPressed) {
+    line(mouseX, mouseY, pmouseX, pmouseY);
   }
-  
-    
-  // Play
-  play = function () {
-    categories = [
-        ["rugrats", "hey-arnold", "dexters-laboratory", "powerpuff-girls", "Doug"],
-        ["lakers", "knicks", "bulls", "clippers"],
-        ["pickles", "chicken-wings", "rice", "bananas",]
-    ];
+}
 
-    chosenCategory = categories[Math.floor(Math.random() * categories.length)];
-    word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-    word = word.replace(/\s/g, "-");
-    console.log(word);
-    buttons();
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
-    geusses = [ ];
-    lives = 10;
-    counter = 0;
-    space = 0;
-    result();
-    comments();
-    selectCat();
-    canvas();
-  }
+$('#ten-px').click(function(){
+  lineWeight = 10;
+  $(this).addClass('active');
+  $('#two-px').removeClass('active');
+});
 
-  play();
-  
-  // Hint
+$('#two-px').click(function(){
+  lineWeight = 2;
+  $(this).addClass('active');
+  $('#ten-px').removeClass('active');
+});
 
-    hint.onclick = function() {
-
-      hints = [
-        ["A group of toddlers who seek daily adventures", "Move it Football head!", "Annoying little sister named Dee-Dee", "created from sugar, spice and everything nice", "Skeeter's Bestfriend"],
-        ["Kobe's Land", "NY's Original Team", "Greatest Player Ever!", "Former Buffalo Braves Team"],
-        ["Taja's favorite word! lol", "Buffalonian's Favorite", "White or Brown", "Yellow Fruit"]
-    ];
-
-    var catagoryIndex = categories.indexOf(chosenCategory);
-    var hintIndex = chosenCategory.indexOf(word);
-    showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
-  };
-
-   // Reset
-
-  document.getElementById('reset').onclick = function() {
-    correct.parentNode.removeChild(correct);
-    letters.parentNode.removeChild(letters);
-    showClue.innerHTML = "";
-    context.clearRect(0, 0, 400, 400);
-    play();
-  }
-};
 
 });
+
+
+
 

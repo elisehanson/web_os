@@ -1,40 +1,29 @@
 <% content_for :game do %>
-   <!-- <h2>Tic-Tac-Toe</h2>
-      
-  <select id="mySelect">
-    <option value="o">O</option>
-    <option value="x">X</option>
-  </select>
-    @box=["one","two","three","four","five","six","seven","eight","nine"] %>
-  <button id= "game_reset" type="button">Reset</button>
-  
-  <div id="wrapper">
-     @box.each do |box| %>
-      <div  class="box1" id= box %>>
-        <img class= "pic_o" id= "pic_o_  box %>" src= asset_path "o.png"%>>
-        <span><img class= "pic_x" id= "pic_x_  box %>" src=  asset_path "x.png"%>></span>
-      </div>
-     </end  %>
-  </div> -->
 
-  <div class="gamebody">
-    <div class="wrapper">
-     <h1>Hangman</h1>
-      <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
-    </div>
-    <div class="wrapper">
-      <div id="buttons">
-      </div>  
-      <p id="catagoryName"></p>
-      <div id="hold">
-      </div>
-      <p id="mylives"></p>
-      <p id="clue">Clue -</p>  
-       <canvas id="stickman">Browser does NOT support HTML5 Canvas tag</canvas>
-      <div class="container">
-        <button id="hint">Hint</button>
-        <button id="reset">Play again</button>
-      </div>
-    </div>
-</div>
+
+<!-- 
+<section id="wrapper">
+   <canvas id="lines"></canvas> 
+</section>
+
+<button class="drawing-button" id="ten-px" class="active">10px</button>
+<button class="drawing-button" id="two-px">2px</button>
+
+
+ -->
+
+
+  <div class="tiny" style="margin:-23px 0 10px 30px;">Draw </div> 
+    <hr><br>
+
+<video width="100%" autoplay loop>
+    <source src="http://elisehanson.info/drawtool.mp4" type="video/mp4">
+    <source src="m" type="video/ogv">
+      Your browser does not support the video
+  </video>
+
+
+
+
+
 <% end %>

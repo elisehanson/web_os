@@ -6,7 +6,7 @@
   top:150px;
   left:250px;
   width: 40%;
-  height:60%;
+  height:65%;
   border-radius: 4px; padding: 8px;
   resize:both;
   overflow:auto;
@@ -19,25 +19,27 @@
 .email_field{
   width:100%;
   box-sizing: border-box;
-  background-color: transparent;
+/*  background-color: transparent;*/
   border: none;
   color: black;
-  font-size: .9rem;
+/*  font-size: .9rem;*/
   font-weight: 200;
-  margin-bottom: 2rem;
+/*  margin-bottom: 2rem;*/
   outline: none;
-  padding: 0.6rem 0;
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+/*  padding: 0.6rem 0;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);*/
   transition: all 0.2s ease-in-out;
+  font-family: 'Karla';
 }
 #body_content{
-  margin-top:5%;
+  margin-top:3%;
   width:100%;
   height:100px;
   background-color:rgb(245,245,245);
   color: black;
   font-size: .9rem;
   font-weight: 200;
+  font-family: 'Karla';
 
 }
 .email_label{

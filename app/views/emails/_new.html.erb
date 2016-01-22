@@ -1,13 +1,24 @@
 
 <% content_for :email do %>
+
+  <div class="tiny" style="margin:-23px 0 10px 30px;">Email </div> 
+		<hr><br>
+
+
 <div id="emailform">
   <%= form_for :emails, :url=>{ :controller=>"emails", :action =>"create", :id=>session[:user_id]}, :method=>:post, :remote=>true  do |f| %>
-    <%= f.label "To:", :class=> "email_label" %>
-    <%= f.text_field :email, :class=> "email_field", :id=> "email_content"  %><br>
-    <%= f.label "Subject:", :class=>"email_label"%>
-    <%= f.text_field :subject, :class=> "email_field", :id=>"subject_content" %><br>
-    <%= f.text_area :body, :id=>"body_content" %></br>
-    <%= f.submit "Send", :id=>"email_button"  %>
+<!--     <%= f.label "To:", :class=> "email_label" %> -->
+
+    <%= f.text_field :email, :class=> "email_field", :id=> "email_content", style: "resize: none; height:50px; width:100%; border: none; background-color:white; padding:10px; ", placeholder: "To" %><br>
+
+<!--     <%= f.label "Subject:", :class=>"email_label"%> -->
+
+    <%= f.text_field :subject, :class=> "email_field", :id=>"subject_content", style: "resize: none; height:50px; width:100%; border: none; background-color:white; padding:10px; border-top:1px lightgrey solid", placeholder: "Subject" %><br>
+
+    <%= f.text_area :body, :id=>"body_content", style: "resize: none; height:200px; width:100%; border: none; padding:10px;", placeholder: "Content" %></br>
+
+    <%= f.submit "Send", :id=>"email_button", :class => 'b' %>
+
   <% end %>
   </div>
 
